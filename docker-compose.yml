@@ -1,0 +1,18 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - elasticmq_service
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
+
+  elasticmq_service:
+    image: s12v/elasticmq
+    container_name: elasticmq_service
+    volumes:
+      - ./docker/elasticmq:/etc/elasticmq

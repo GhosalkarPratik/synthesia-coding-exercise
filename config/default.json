@@ -1,0 +1,18 @@
+{
+  "sqs": {
+    "endpoint": "http://elasticmq_service:9324",
+    "credentials": {
+      "accessKeyId": "accessKeyId",
+      "secretAccessKey": "secretAccessKey"
+    },
+    "region": "elasticmq",
+    "maxRetries": 5,
+    "queue": {
+      "url": "http://elasticmq_service:9324/queue/request_queue"
+    }
+  },
+  "api": {
+    "base": "https://hiring.api.synthesia.io",
+    "apiKey": "<UPDATE API KEY HERE>"
+  }
+}
